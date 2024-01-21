@@ -1417,12 +1417,13 @@ canvas{
 /* model */
 
 .model{
-  position: absolute !important;
+  position: absolute!important;
   z-index: 999;
-  height: 1000px !important;
-  left: 0;
+  height: 1000px!important;
+  left: 42%;
   top: 30em;
-  right: 0;
+  right: 50%;
+  width: 400px;
 }
 
 /* model */
