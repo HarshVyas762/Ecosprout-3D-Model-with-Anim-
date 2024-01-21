@@ -30,9 +30,32 @@ import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls, ContactShadows } from "@react-three/drei";
 import Plant from "../public/Plant";
 
-const RotatingPlant = () => {
+const ResponsiveRotatingPlant = () => {
   const plantRef = useRef();
+  const [windowSize, setWindowSize] = useState({ width: window.innerWidth, height: window.innerHeight });
 
+  // Update window size when the window is resized
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowSize({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []); // Run only once when the component mounts
+
+  // Calculate responsive scale based on window size
+  const calculateScale = () => {
+    const minDimension = Math.min(windowSize.width, windowSize.height);
+    const scaleFactor = minDimension / 300; // Adjust the scale factor as needed
+
+    return [scaleFactor, scaleFactor, scaleFactor];
+  };
+
+  // useFrame hook to perform animations in the rendering loop
   useFrame(() => {
     // Rotate the Plant component around the y-axis
     if (plantRef.current) {
@@ -41,8 +64,8 @@ const RotatingPlant = () => {
   });
 
   return (
-    <group ref={plantRef}>
-      <Plant scale={[3, 3, 3]} />
+    <group ref={plantRef} scale={calculateScale()}>
+      <Plant />
     </group>
   );
 };
@@ -172,7 +195,7 @@ function App() {
                     <OrbitControls enableZoom={false} />
                     <Suspense fallback={null}>
                       {/* <Plant scale={[3, 3, 3]} /> */}
-                      <RotatingPlant />
+                      <ResponsiveRotatingPlant  />
                     </Suspense>
                     <Environment preset="sunset" />
                   </Canvas>
