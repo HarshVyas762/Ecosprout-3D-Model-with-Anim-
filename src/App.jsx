@@ -189,18 +189,7 @@ function App() {
             style={{ opacity: isVisible ? 1 : 0 }}
             onClick={scrollToTop}
           />
-
-           <Canvas className="model">
-                    <ambientLight />
-                    <OrbitControls enableZoom={false} />
-                    <Suspense fallback={null}>
-                      {/* <Plant scale={[3, 3, 3]} /> */}
-                      <ResponsiveRotatingPlant  />
-                    </Suspense>
-                    <Environment preset="sunset" />
-                  </Canvas>
                   
-
           <div className="sec1">
             <div className="container">
               <div className="header">
@@ -280,7 +269,15 @@ function App() {
                     />
                   </button>
                 </div>
-
+                <Canvas className="model col-lg-4 col-md-4 col-sm-12" >
+                    <ambientLight />
+                    <OrbitControls enableZoom={false} />
+                    <Suspense fallback={null}>
+                      {/* <Plant scale={[3, 3, 3]} /> */}
+                      <ResponsiveRotatingPlant  />
+                    </Suspense>
+                    <Environment preset="sunset" />
+                  </Canvas>
                 <div className="col-lg-3 col-md-5 community">
                   <div className="comdiv">
                     <img className="propic" src={propic} alt="" />
