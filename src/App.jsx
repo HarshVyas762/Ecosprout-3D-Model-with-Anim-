@@ -33,6 +33,8 @@ import Plant from "../public/Plant";
 const ResponsiveRotatingPlant = () => {
   const plantRef = useRef();
   const [windowSize, setWindowSize] = useState({ width: window.innerWidth, height: window.innerHeight });
+  const [scrollPosition, setScrollPosition] = useState(0);
+  
 
   // Update window size when the window is resized
   useEffect(() => {
@@ -55,11 +57,32 @@ const ResponsiveRotatingPlant = () => {
     return [scaleFactor, scaleFactor, scaleFactor];
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (plantRef.current) {
+        const rect = plantRef.current.getBoundingClientRect();
+        const isInCenter = rect.top < window.innerHeight / 2 && rect.bottom > window.innerHeight / 2;
+  
+        if (isInCenter) {
+          setScrollPosition(window.scrollY);
+        }
+      }
+    };
+  
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   // useFrame hook to perform animations in the rendering loop
   useFrame(() => {
     // Rotate the Plant component around the y-axis
     if (plantRef.current) {
       plantRef.current.rotation.y += 0.01; // Adjust the rotation speed
+      // Translate the Plant component along the y-axis based on scroll position
+      plantRef.current.position.y = -scrollPosition * 0.01; // Adjust the translation speed
+   
     }
   });
 

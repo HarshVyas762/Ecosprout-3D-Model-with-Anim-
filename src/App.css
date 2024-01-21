@@ -1407,9 +1407,9 @@ height: 50px;
   .model {
     position: absolute !important;
     z-index: 999;
-    height: 800px !important;
+    height: 993px !important;
     left: 50%;
-    top: 18rem;
+    top: 29rem;
     transform: translate(-50%, 0);
     width: 400px !important;
 }
