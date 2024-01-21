@@ -1,0 +1,475 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 6514,
+      "max": [
+        0.19097411632537842,
+        0.19097411632537842,
+        0.5148619413375854
+      ],
+      "min": [
+        -0.19097411632537842,
+        -0.19097411632537842,
+        0.0005291181150823832
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 78168,
+      "componentType": 5126,
+      "count": 6514,
+      "max": [
+        0.9999806880950928,
+        0.9999806880950928,
+        1.0
+      ],
+      "min": [
+        -0.9999806880950928,
+        -0.9999806880950928,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 6514,
+      "max": [
+        0.9999951124191284,
+        0.9999605417251587,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.9999600648880005,
+        -0.9999951124191284,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 6514,
+      "max": [
+        0.9999759793281555,
+        1.0000004768371582
+      ],
+      "min": [
+        8.538365364074707e-05,
+        1.2698133105004672e-06
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 52112,
+      "componentType": 5126,
+      "count": 6514,
+      "max": [
+        0.9999759793281555,
+        1.0000004768371582
+      ],
+      "min": [
+        8.538365364074707e-05,
+        1.2698133105004672e-06
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 104224,
+      "componentType": 5126,
+      "count": 6514,
+      "max": [
+        0.9999759793281555,
+        1.0000004768371582
+      ],
+      "min": [
+        8.538365364074707e-05,
+        1.2698133105004672e-06
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 35688,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 156336,
+      "componentType": 5126,
+      "count": 7327,
+      "max": [
+        0.6933143138885498,
+        0.6794947981834412,
+        1.4166297912597656
+      ],
+      "min": [
+        -0.7086048126220703,
+        -0.4833945333957672,
+        0.13496047258377075
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 244260,
+      "componentType": 5126,
+      "count": 7327,
+      "max": [
+        0.9989015460014343,
+        0.9994910359382629,
+        0.9999971985816956
+      ],
+      "min": [
+        -0.9991292953491211,
+        -0.9988518357276917,
+        -0.9997624754905701
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "byteOffset": 104224,
+      "componentType": 5126,
+      "count": 7327,
+      "max": [
+        0.9999408721923828,
+        0.9988164305686951,
+        1.0,
+        1.0
+      ],
+      "min": [
+        -0.999302864074707,
+        -0.9995555877685547,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 156336,
+      "componentType": 5126,
+      "count": 7327,
+      "max": [
+        0.9945801496505737,
+        0.9999975562095642
+      ],
+      "min": [
+        0.0038247108459472656,
+        0.0023333425633609295
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 142752,
+      "componentType": 5125,
+      "count": 35166,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "AllQuad (https://sketchfab.com/AllQuad)",
+      "license": "SKETCHFAB Standard (https://sketchfab.com/licenses)",
+      "source": "https://sketchfab.com/3d-models/stand-pot-plant-monstera-deliciosa-d6f166481fa9466fbd288722d0c4df2f",
+      "title": "Stand Pot Plant Monstera Deliciosa"
+    },
+    "generator": "Sketchfab-15.24.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 283416,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 214952,
+      "byteOffset": 283416,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 332184,
+      "byteOffset": 498368,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 221456,
+      "byteOffset": 830552,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 1052008,
+      "uri": "plant.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/Terracotta_Planter_Stand_Mat_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/Terracotta_Planter_Stand_Mat_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/Terracotta_Planter_Stand_Mat_normal.jpeg"
+    },
+    {
+      "uri": "textures/MONSTERA_BIG_Mat.002_baseColor.png"
+    },
+    {
+      "uri": "textures/MONSTERA_BIG_Mat.002_metallicRoughness.png"
+    },
+    {
+      "uri": "textures/MONSTERA_BIG_Mat.002_normal.jpeg"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "name": "Terracotta_Planter_Stand_Mat",
+      "normalTexture": {
+        "index": 2
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 1
+        }
+      }
+    },
+    {
+      "alphaMode": "BLEND",
+      "doubleSided": true,
+      "name": "MONSTERA_BIG_Mat.002",
+      "normalTexture": {
+        "index": 5
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3
+        },
+        "metallicFactor": 0.0,
+        "metallicRoughnessTexture": {
+          "index": 4
+        }
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Terracotta_Planter_Stand_Terracotta_Planter_Stand_Mat_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4,
+            "TEXCOORD_2": 5
+          },
+          "indices": 6,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "MONSTERA_BIG_MONSTERA_BIG_Mat.002_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 8,
+            "POSITION": 7,
+            "TANGENT": 9,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "matrix": [
+        0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.009999999776482582,
+        0.0,
+        0.0,
+        -0.009999999776482582,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "c6cebcc1c2f54a4599ef276592c91313.fbx"
+    },
+    {
+      "children": [
+        3
+      ],
+      "name": "RootNode"
+    },
+    {
+      "children": [
+        4,
+        5
+      ],
+      "matrix": [
+        100.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -1.629206793918314e-05,
+        -99.99999999999868,
+        0.0,
+        0.0,
+        99.99999999999868,
+        -1.629206793918314e-05,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Terracotta_Planter_Stand"
+    },
+    {
+      "mesh": 0,
+      "name": "Terracotta_Planter_Stand_Terracotta_Planter_Stand_Mat_0"
+    },
+    {
+      "children": [
+        6
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        -2.646977960169688e-23,
+        0.0,
+        0.0,
+        2.646977960169688e-23,
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "MONSTERA_BIG"
+    },
+    {
+      "mesh": 1,
+      "name": "MONSTERA_BIG_MONSTERA_BIG_Mat.002_0"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "sampler": 0,
+      "source": 3
+    },
+    {
+      "sampler": 0,
+      "source": 4
+    },
+    {
+      "sampler": 0,
+      "source": 5
+    }
+  ]
+}

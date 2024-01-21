@@ -4,7 +4,7 @@ Command: npx gltfjsx@6.2.16 falcon.gltf
 Author: Stym (https://sketchfab.com/Stym)
 License: CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
 Source: https://sketchfab.com/3d-models/millennium-falcon-6a27ba566af142708743ccb8b4668d4b
-Title: Millennium Falcon
+Title: Millennium Falcon 
 */
 
 import React, { useRef } from 'react'
