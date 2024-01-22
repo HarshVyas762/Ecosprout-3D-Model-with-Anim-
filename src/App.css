@@ -136,7 +136,7 @@ height: 50px;
 
 .bannertitle {
   font-family: Montserrat;
-  font-size: 10vw;
+  font-size: 8vw;
   font-weight: 600;
   line-height: 168px;
   letter-spacing: 0em;
@@ -1407,9 +1407,9 @@ height: 50px;
   .model {
     position: absolute !important;
     z-index: 999;
-    height: 993px !important;
+    height: 950px !important;
     left: 50%;
-    top: 29rem;
+    top: 18rem;
     transform: translate(-50%, 0);
     width: 400px !important;
 }
