@@ -170,10 +170,7 @@ function App() {
       <Helmet>
         <title>EcoSprout</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link
-          href="https://fonts.cdnfonts.com/css/montserrat"
-          rel="stylesheet"
-        />
+      
       </Helmet>
 
       {loading ? (
@@ -269,7 +266,7 @@ function App() {
                     />
                   </button>
                 </div>
-                <Canvas className="model col-lg-4 col-md-4 col-sm-12" >
+                <Canvas className="model" >
                     <ambientLight />
                     <OrbitControls enableZoom={false} />
                     <Suspense fallback={null}>
