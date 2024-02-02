@@ -29,10 +29,111 @@ import footerlogo from "./img/footerlogo.png";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { Environment, OrbitControls, ContactShadows } from "@react-three/drei";
 import Plant from "../public/Plant";
+import gsap from "gsap";
 
 const ResponsiveRotatingPlant = () => {
   const plantRef = useRef();
-  const [windowSize, setWindowSize] = useState({ width: window.innerWidth, height: window.innerHeight });
+  const [windowSize, setWindowSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  // scroll
+  const [currentSection, setCurrentSection] = useState(null);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll(
+      "#sec1, #sec2, #sec3, #sec4, #sec5, #footermain"
+    );
+
+    const options = {
+      threshold: 0.5, // Adjust the threshold as needed
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setCurrentSection(entry.target.id);
+        }
+      });
+    }, options);
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  useEffect(() => {
+    // Create a timeline
+    const timeline = gsap.timeline();
+
+    // Define animation sequences based on the currentSection
+    switch (currentSection) {
+      case "sec1":
+        timeline.to(plantRef.current.position, {
+          x: 0,
+          y: 2.6,
+          z: 0,
+          duration: 1.9,
+        });
+        timeline.to(plantRef.current.rotation, { x: Math.PI*2, duration: 1.9, ease: "power2.out" }, 0);
+        break;
+
+      case "sec2":
+        timeline.to(plantRef.current.position, {
+          x: -0.4,
+          y: 0.5,
+          z: 3,
+          duration: 1.9,
+        });
+        timeline.to(plantRef.current.rotation, { x: "+=" +  (Math.PI/0.5), duration: 1.9, ease: "power2.out" }, 0);
+
+        break;
+      case "sec3":
+        timeline.to(plantRef.current.position, {
+          x: 0.5,
+          y: -0.5,
+          z: 0,
+          duration: 1.9,
+        });
+        timeline.to(plantRef.current.rotation, { x: Math.PI/0.5, duration: 1.9, ease: "power2.out" }, 0);
+
+        break;
+      case "sec4":
+        timeline.to(plantRef.current.position, {
+          x: -0.4,
+          y: -0.9,
+          z: 1,
+          duration: 1.9,
+        });
+        timeline.to(plantRef.current.rotation, {x: "+=" +  (Math.PI/0.5), duration: 1.9, ease: "power2.out" }, 0);
+
+        break;
+      case "sec5":
+        timeline.to(plantRef.current.position, {
+          x: 0.4,
+          y: -1.3,
+          z: 2.5,
+          duration: 1.9,
+        });
+        timeline.to(plantRef.current.rotation, { x: Math.PI*2, duration: 1.9, ease: "power2.out" }, 0);
+
+        default:
+        break;
+    }
+
+    // Ensure the timeline restarts on each update of currentSection
+    timeline.restart();
+
+    // Cleanup function to cancel the timeline on component unmount
+    return () => {
+      timeline.kill(); // Kills the timeline to prevent memory leaks
+    };
+  }, [currentSection]);
+  // scroll
 
   // Update window size when the window is resized
   useEffect(() => {
@@ -40,17 +141,18 @@ const ResponsiveRotatingPlant = () => {
       setWindowSize({ width: window.innerWidth, height: window.innerHeight });
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, []); // Run only once when the component mounts
 
   // Calculate responsive scale based on window size
   const calculateScale = () => {
     const minDimension = Math.min(windowSize.width, windowSize.height);
-    const scaleFactor = minDimension / 300; // Adjust the scale factor as needed
+    let scaleFactor = minDimension / 1900; // Adjust the scale factor as needed
+    scaleFactor = Math.max(scaleFactor, 0.1);
 
     return [scaleFactor, scaleFactor, scaleFactor];
   };
@@ -64,7 +166,7 @@ const ResponsiveRotatingPlant = () => {
   });
 
   return (
-    <group ref={plantRef} scale={calculateScale()}>
+    <group ref={plantRef} scale={calculateScale()} position={[0, 2.6, 0]}>
       <Plant />
     </group>
   );
@@ -170,7 +272,6 @@ function App() {
       <Helmet>
         <title>EcoSprout</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      
       </Helmet>
 
       {loading ? (
@@ -186,8 +287,18 @@ function App() {
             style={{ opacity: isVisible ? 1 : 0 }}
             onClick={scrollToTop}
           />
-                  
-          <div className="sec1">
+
+          <Canvas className="model">
+            <ambientLight />
+            {/* <OrbitControls enableZoom={false} /> */}
+            <Suspense fallback={null}>
+              {/* <Plant scale={[3, 3, 3]} /> */}
+              <ResponsiveRotatingPlant />
+            </Suspense>
+            <Environment preset="sunset" />
+          </Canvas>
+
+          <div className="sec1" id="sec1">
             <div className="container">
               <div className="header">
                 <div className="col-lg-3 col-md-3">
@@ -266,15 +377,6 @@ function App() {
                     />
                   </button>
                 </div>
-                <Canvas className="model" >
-                    <ambientLight />
-                    <OrbitControls enableZoom={false} />
-                    <Suspense fallback={null}>
-                      {/* <Plant scale={[3, 3, 3]} /> */}
-                      <ResponsiveRotatingPlant  />
-                    </Suspense>
-                    <Environment preset="sunset" />
-                  </Canvas>
                 <div className="col-lg-3 col-md-5 community">
                   <div className="comdiv">
                     <img className="propic" src={propic} alt="" />
@@ -288,7 +390,7 @@ function App() {
             </div>
           </div>
 
-          <div className="sec2 section">
+          <div className="sec2 section" id="sec2">
             <div className="container">
               <div className="col-lg-5 col-md-5 col-sm-12">
                 <img className="imgsvg" src={sec2svg} alt="" />
@@ -324,7 +426,7 @@ function App() {
             </div>
           </div>
 
-          <div className="sec3 section container">
+          <div className="sec3 section container" id="sec3">
             <div className="col-lg-11 col-md-11 col-sm-12">
               <span className="sec3_title">
                 Cultivating a Greener World through Sustainability, Tree
@@ -359,7 +461,7 @@ function App() {
             </div>
           </div>
 
-          <div className="sec4 section container">
+          <div className="sec4 section container" id="sec4">
             <div className="sec4div1">
               <div
                 className="col-md-3 col-md-3 col-sm-12 gogreen"
@@ -398,6 +500,7 @@ function App() {
             {/* <canvas id="canvas3d"></canvas> */}
             <div
               className="sec5"
+              id="sec5"
               style={{ marginTop: "100px", marginBottom: "100px" }}
             >
               <div
@@ -503,6 +606,7 @@ function App() {
 
           <div
             className="footer"
+            id="footer"
             style={{
               marginTop: "100px",
               paddingTop: "100px",
@@ -510,7 +614,7 @@ function App() {
             }}
           >
             <div className="container">
-              <div className="footermain">
+              <div className="footermain" id="footermain">
                 <div className="col-lg-8 col-md-8 col-sm-12">
                   <span id="footertitle">Cultivating a Greener world</span>
                   <div className="col-lg-8 col-md-8 col-sm-12">
