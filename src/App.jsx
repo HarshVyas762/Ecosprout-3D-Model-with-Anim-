@@ -73,52 +73,118 @@ const ResponsiveRotatingPlant = () => {
     // Define animation sequences based on the currentSection
     switch (currentSection) {
       case "sec1":
+
+        let positionSec1 = [0, 2.6, 0];
+        if (window.innerWidth < 768) {
+          positionSec1 = [0, 3.25, 0]; // Adjusted position for mobile screens
+        }
+
         timeline.to(plantRef.current.position, {
-          x: 0,
-          y: 2.6,
-          z: 0,
+          x: positionSec1[0],
+          y: positionSec1[1],
+          z: positionSec1[2],
           duration: 1.9,
         });
+
+        // timeline.to(plantRef.current.position, {
+        //   x: 0,
+        //   y: 2.6,
+        //   z: 0,
+        //   duration: 1.9,
+        // });
         timeline.to(plantRef.current.rotation, { x: Math.PI * 2, duration: 1.9, ease: "power2.out" }, 0);
         break;
 
       case "sec2":
+
+        let positionSec2 = [-0.4, 0.5, 3];
+        if (window.innerWidth < 768) {
+          positionSec2 = [0, 1.15, 1.2]; // Adjusted position for mobile screens
+        }
+
         timeline.to(plantRef.current.position, {
-          x: -0.4,
-          y: 0.5,
-          z: 3,
+          x: positionSec2[0],
+          y: positionSec2[1],
+          z: positionSec2[2],
           duration: 1.9,
         });
+
+        // timeline.to(plantRef.current.position, {
+        //   x: -0.4,
+        //   y: 0.5,
+        //   z: 3,
+        //   duration: 1.9,
+        // });
         timeline.to(plantRef.current.rotation, { x: "+=" + (Math.PI / 0.5), duration: 1.9, ease: "power2.out" }, 0);
 
         break;
       case "sec3":
+
+        let positionSec3 = [0.5, -0.5, 0];
+        if (window.innerWidth < 768) {
+          positionSec3 = [0.13, -0.35, 1.4]; // Adjusted position for mobile screens
+        }
+
         timeline.to(plantRef.current.position, {
-          x: 0.5,
-          y: -0.5,
-          z: 0,
+          x: positionSec3[0],
+          y: positionSec3[1],
+          z: positionSec3[2],
           duration: 1.9,
         });
+
+        // timeline.to(plantRef.current.position, {
+        //   x: 0.5,
+        //   y: -0.5,
+        //   z: 0,
+        //   duration: 1.9,
+        // });
         timeline.to(plantRef.current.rotation, { x: Math.PI / 0.5, duration: 1.9, ease: "power2.out" }, 0);
 
         break;
       case "sec4":
+
+        let positionSec4 = [-0.4, -0.9, 1];
+        if (window.innerWidth < 768) {
+          positionSec4 = [0, -1.46, 0.2]; // Adjusted position for mobile screens
+        }
+
         timeline.to(plantRef.current.position, {
-          x: -0.4,
-          y: -0.9,
-          z: 1,
+          x: positionSec4[0],
+          y: positionSec4[1],
+          z: positionSec4[2],
           duration: 1.9,
         });
+
+        // timeline.to(plantRef.current.position, {
+        //   x: -0.4,
+        //   y: -0.9,
+        //   z: 1,
+        //   duration: 1.9,
+        // });
         timeline.to(plantRef.current.rotation, { x: "+=" + (Math.PI / 0.5), duration: 1.9, ease: "power2.out" }, 0);
 
         break;
       case "sec5":
+
+        let positionSec5 = [-0.4, -1.3, 2.5];
+        if (window.innerWidth < 768) {
+          positionSec5 = [0.15, -2.12, 1]; // Adjusted position for mobile screens
+        }
+
         timeline.to(plantRef.current.position, {
-          x: 0.4,
-          y: -1.3,
-          z: 2.5,
+          x: positionSec5[0],
+          y: positionSec5[1],
+          z: positionSec5[2],
           duration: 1.9,
         });
+
+        // timeline.to(plantRef.current.position, {
+        //   x: 0.4,
+        //   y: -1.3,
+        //   z: 2.5,
+        //   duration: 1.9,
+        // });
+
         timeline.to(plantRef.current.rotation, { x: Math.PI * 2, duration: 1.9, ease: "power2.out" }, 0);
 
       default:
