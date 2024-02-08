@@ -78,6 +78,9 @@ const ResponsiveRotatingPlant = () => {
         if (window.innerWidth < 768) {
           positionSec1 = [0, 3.25, 0]; // Adjusted position for mobile screens
         }
+        else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+          positionSec1 = [0, 6.1, -4]; // Adjusted position for tablet screens
+        }
 
         timeline.to(plantRef.current.position, {
           x: positionSec1[0],
@@ -101,6 +104,9 @@ const ResponsiveRotatingPlant = () => {
         if (window.innerWidth < 768) {
           positionSec2 = [0, 1.15, 1.2]; // Adjusted position for mobile screens
         }
+        else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+          positionSec2 = [-0.25, 2.5, 0]; // Adjusted position for tablet screens
+        }
 
         timeline.to(plantRef.current.position, {
           x: positionSec2[0],
@@ -123,6 +129,9 @@ const ResponsiveRotatingPlant = () => {
         let positionSec3 = [0.5, -0.5, 0];
         if (window.innerWidth < 768) {
           positionSec3 = [0.13, -0.35, 1.4]; // Adjusted position for mobile screens
+        }
+        else if (window.innerWidth >= 768 && window.innerWidth < 1024) {
+          positionSec3 = [0, 0, 0]; // Adjusted position for tablet screens
         }
 
         timeline.to(plantRef.current.position, {
