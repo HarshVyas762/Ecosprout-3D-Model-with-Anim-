@@ -79,7 +79,7 @@ const ResponsiveRotatingPlant = () => {
           z: 0,
           duration: 1.9,
         });
-        timeline.to(plantRef.current.rotation, { x: Math.PI*2, duration: 1.9, ease: "power2.out" }, 0);
+        timeline.to(plantRef.current.rotation, { x: Math.PI * 2, duration: 1.9, ease: "power2.out" }, 0);
         break;
 
       case "sec2":
@@ -89,7 +89,7 @@ const ResponsiveRotatingPlant = () => {
           z: 3,
           duration: 1.9,
         });
-        timeline.to(plantRef.current.rotation, { x: "+=" +  (Math.PI/0.5), duration: 1.9, ease: "power2.out" }, 0);
+        timeline.to(plantRef.current.rotation, { x: "+=" + (Math.PI / 0.5), duration: 1.9, ease: "power2.out" }, 0);
 
         break;
       case "sec3":
@@ -99,7 +99,7 @@ const ResponsiveRotatingPlant = () => {
           z: 0,
           duration: 1.9,
         });
-        timeline.to(plantRef.current.rotation, { x: Math.PI/0.5, duration: 1.9, ease: "power2.out" }, 0);
+        timeline.to(plantRef.current.rotation, { x: Math.PI / 0.5, duration: 1.9, ease: "power2.out" }, 0);
 
         break;
       case "sec4":
@@ -109,7 +109,7 @@ const ResponsiveRotatingPlant = () => {
           z: 1,
           duration: 1.9,
         });
-        timeline.to(plantRef.current.rotation, {x: "+=" +  (Math.PI/0.5), duration: 1.9, ease: "power2.out" }, 0);
+        timeline.to(plantRef.current.rotation, { x: "+=" + (Math.PI / 0.5), duration: 1.9, ease: "power2.out" }, 0);
 
         break;
       case "sec5":
@@ -119,9 +119,9 @@ const ResponsiveRotatingPlant = () => {
           z: 2.5,
           duration: 1.9,
         });
-        timeline.to(plantRef.current.rotation, { x: Math.PI*2, duration: 1.9, ease: "power2.out" }, 0);
+        timeline.to(plantRef.current.rotation, { x: Math.PI * 2, duration: 1.9, ease: "power2.out" }, 0);
 
-        default:
+      default:
         break;
     }
 
@@ -468,9 +468,8 @@ function App() {
                 style={{ textAlign: "left" }}
               >
                 <h1
-                  className={`home-title ${
-                    inViewport ? "in-viewport" : "go-green"
-                  }`}
+                  className={`home-title ${inViewport ? "in-viewport" : "go-green"
+                    }`}
                 >
                   <span className="sec4_title">Go Green!</span>
                   <span>
@@ -503,13 +502,7 @@ function App() {
               id="sec5"
               style={{ marginTop: "100px", marginBottom: "100px" }}
             >
-              <div
-                style={{
-                  display: "flex",
-                  placeContent: "center",
-                  paddingTop: "350px",
-                }}
-              >
+              <div className="sec5div">
                 <div className="col-lg-11 col-md-11 col-sm-12 sec5col1">
                   <span className="sec5_title">Any Questions ?</span>
                   <p className="sec5_desc">
@@ -630,7 +623,7 @@ function App() {
                 </div>
               </div>
 
-              <div style={{ display: "flex", marginTop: "100px" }}>
+              <div style={{ display: "flex", marginTop: "100px", flexWrap: 'wrap', rowGap: '20px' }}>
                 <div className="col-lg-6 col-md-6 col-sm-12">
                   <img src={footerlogo} />
                   <p id="logodesc">
