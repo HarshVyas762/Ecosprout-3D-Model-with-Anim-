@@ -75,16 +75,17 @@ const ResponsiveRotatingPlant = () => {
       case "sec1":
 
         let positionSec1 = [0, 2.6, 0];
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 500) {
           positionSec1 = [0, 3.25, 0]; // Adjusted position for mobile screens
         }
+        else if (window.innerWidth >= 500 && window.innerWidth <= 768)
 
-        timeline.to(plantRef.current.position, {
-          x: positionSec1[0],
-          y: positionSec1[1],
-          z: positionSec1[2],
-          duration: 1.9,
-        });
+          timeline.to(plantRef.current.position, {
+            x: positionSec1[0],
+            y: positionSec1[1],
+            z: positionSec1[2],
+            duration: 1.9,
+          });
 
         // timeline.to(plantRef.current.position, {
         //   x: 0,
@@ -99,7 +100,7 @@ const ResponsiveRotatingPlant = () => {
       case "sec2":
 
         let positionSec2 = [-0.4, 0.5, 3];
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 500) {
           positionSec2 = [0, 1.15, 1.2]; // Adjusted position for mobile screens
         }
 
@@ -123,7 +124,7 @@ const ResponsiveRotatingPlant = () => {
       case "sec3":
 
         let positionSec3 = [0.5, -0.5, 0];
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 500) {
           positionSec3 = [0.13, -0.35, 1.4]; // Adjusted position for mobile screens
         }
 
@@ -147,7 +148,7 @@ const ResponsiveRotatingPlant = () => {
       case "sec4":
 
         let positionSec4 = [-0.4, -0.9, 1];
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 500) {
           positionSec4 = [0, -1.46, 0.2]; // Adjusted position for mobile screens
         }
 
@@ -171,7 +172,7 @@ const ResponsiveRotatingPlant = () => {
       case "sec5":
 
         let positionSec5 = [-0.4, -1.3, 2.5];
-        if (window.innerWidth < 768) {
+        if (window.innerWidth < 500) {
           positionSec5 = [0.15, -2.2, 1]; // Adjusted position for mobile screens
         }
 
