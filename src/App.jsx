@@ -721,46 +721,22 @@ function App() {
                     <p className='footer_menulinks'>Endeavours</p>
                     <p className='footer_menulinks'>Contact Us</p> */}
                     <p>
-                      <ScrollLink
-                        className="footer_menulinks"
-                        to="sec1"
-                        smooth={true}
-                        duration={500}
-                        offset={100}
-                      >
+                      <ScrollLink className="footer_menulinks" to="sec1" smooth={true} duration={500} offset={100}>
                         Home
                       </ScrollLink>
                     </p>
                     <p>
-                      <ScrollLink
-                        className="footer_menulinks"
-                        to="sec2"
-                        smooth={true}
-                        duration={500}
-                        offset={100}
-                      >
+                      <ScrollLink className="footer_menulinks" to="sec2" smooth={true} duration={500} offset={100}>
                         About
                       </ScrollLink>
                     </p>
                     <p>
-                      <ScrollLink
-                        className="footer_menulinks"
-                        to="sec3"
-                        smooth={true}
-                        duration={500}
-                        offset={100}
-                      >
+                      <ScrollLink className="footer_menulinks" to="sec3" smooth={true} duration={500} offset={100} >
                         Endeavours
                       </ScrollLink>
                     </p>
                     <p>
-                      <ScrollLink
-                        className="footer_menulinks"
-                        to="sec5"
-                        smooth={true}
-                        duration={500}
-                        offset={200}
-                      >
+                      <ScrollLink className="footer_menulinks" to="sec5" smooth={true} duration={500} offset={200}>
                         Contact Us
                       </ScrollLink>
                     </p>
@@ -771,8 +747,7 @@ function App() {
 
             <div
               className="col-lg-12 col-md-12 col-sm-12"
-              style={{ textAlign: "center", background: "#1d1e25" }}
-            >
+              style={{ textAlign: "center", background: "#1d1e25" }}>
               <p style={{ color: "white", margin: "0", paddingTop: "100px" }}>
                 @copyright Ecosprout 2024. Designed by{" "}
                 <a
