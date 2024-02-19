@@ -78,7 +78,7 @@ const ResponsiveRotatingPlant = () => {
         if (window.innerWidth < 500) {
           positionSec1 = [0, 3.25, 0]; // Adjusted position for mobile screens
         }
-        else if (window.innerWidth >= 500 && window.innerWidth <= 768)
+        // else if (window.innerWidth >= 500 && window.innerWidth <= 768)
 
           timeline.to(plantRef.current.position, {
             x: positionSec1[0],
